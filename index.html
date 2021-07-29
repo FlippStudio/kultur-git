@@ -9,16 +9,27 @@
   <title>Kulturlove</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light sticky">
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top">
     <div class="container position-relative">
       <a class="navbar-brand" href="#">
-        <img src="./img/logo.svg" alt="Logo portalu KulturLove">
+        <img src="./img/logo.svg" alt="Logo portalu KulturLove" class="img-fluid">
       </a>
+      <div class="top-bar d-xl-none d-flex">
+        <div id="increase-font">
+          <img src="./img/nav/plus.svg" alt="Powiększenie czcionki">
+        </div>
+        <div id="descrease-font">
+          <img src="./img/nav/minus.svg" alt="Zmniejszenie czcionki">
+        </div>
+        <div id="contrast">
+          <img src="./img/nav/contrast.svg" alt="Zmiana kontrastu">
+        </div>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end flex-column align-self-start" id="navbarNav">
-        <div class="top-bar">
+        <div class="top-bar d-xl-flex d-none">
           <div id="increase-font">
             <img src="./img/nav/plus.svg" alt="Powiększenie czcionki">
           </div>
@@ -93,44 +104,258 @@
     </div>
   </nav>
   <section id="slider">
-    <div class="container position-relative">
+    <div class="container position-relative d-xl-block d-none">
       <img src="./img/slider/slider-back-xxl.png" alt="Tło slidera" class="slider-back">
-    </div>
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="5000">
-          <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
-          <div class="container position-relative test">
-            <div class="carousel-caption">
-              Wydarzenia kulturowe
+    </div>
+    <div id="carousel-small" class="carousel slide d-xl-none d-block" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="img-fluid" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="img-fluid" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./img/slider/photo.jpg" class="img-fluid" alt="Zdjęcie 1">
+            <div class="container position-relative">
+              <div class="carousel-caption">
+                Wydarzenia kulturowe
+              </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
-          <div class="container position-relative">
-            <div class="carousel-caption">
-              Wydarzenia kulturowe
+      </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="m-title">
+            Czym jest portal KulturLove?
+          </h2>
+        </div>
+        <div class="col-xxl-4 col-lg-5">
+          <div class="photo-about">
+            <img src="./img/about/photo.jpg" alt="Zdjęcie pokazuje komputer." class="img-fluid">
+          </div>
+        </div>
+        <div class="col-xxl-8 col-lg-7">
+          <div class="flex-about">
+            <div class="text-about">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue odio ornare sagittis lacinia. 
+              Nam hendrerit sagittis dui, in malesuada risus luctus maximus. Nullam commodo ipsum urna, sit amet ultrices sem accumsan et. 
+              Duis semper nisl sit amet mi bibendum blandit. Aenean ac felis augue. Cras faucibus laoreet pharetra. 
+              Nam ut ex sit amet turpis vestibulum malesuada varius eget urna. Nullam a viverra risus. 
+              Proin ullamcorper dolor sit amet risus maximus, quis aliquet augue egestas. Praesent auctor eget mauris dictum gravida. 
+              Nunc convallis orci sit amet nibh ullamcorper, eget porta enim dapibus.
             </div>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="./img/slider/photo.jpg" class="d-block" alt="Zdjęcie 1">
-          <div class="container position-relative">
-            <div class="carousel-caption">
-              Wydarzenia kulturowe
+        <div class="col-xxl-8 col-lg-7">
+          <div class="flex-about">
+            <div class="text-about">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue odio ornare sagittis lacinia. 
+              Nam hendrerit sagittis dui, in malesuada risus luctus maximus. Nullam commodo ipsum urna, sit amet ultrices sem accumsan et. 
+              Duis semper nisl sit amet mi bibendum blandit. Aenean ac felis augue. Cras faucibus laoreet pharetra. 
+              Nam ut ex sit amet turpis vestibulum malesuada varius eget urna. Nullam a viverra risus. 
+              Proin ullamcorper dolor sit amet risus maximus, quis aliquet augue egestas. Praesent auctor eget mauris dictum gravida. 
+              Nunc convallis orci sit amet nibh ullamcorper, eget porta enim dapibus.
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-lg-5">
+          <div class="photo-about">
+            <img src="./img/about/photo.jpg" alt="Zdjęcie pokazuje komputer." class="img-fluid">
+          </div>
+        </div>
+        <div class="col-xxl-4 col-lg-5">
+          <div class="photo-about">
+            <img src="./img/about/photo.jpg" alt="Zdjęcie pokazuje komputer." class="img-fluid">
+          </div>
+        </div>
+        <div class="col-xxl-8 col-lg-7">
+          <div class="flex-about">
+            <div class="text-about">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue odio ornare sagittis lacinia. 
+              Nam hendrerit sagittis dui, in malesuada risus luctus maximus. Nullam commodo ipsum urna, sit amet ultrices sem accumsan et. 
+              Duis semper nisl sit amet mi bibendum blandit. Aenean ac felis augue. Cras faucibus laoreet pharetra. 
+              Nam ut ex sit amet turpis vestibulum malesuada varius eget urna. Nullam a viverra risus. 
+              Proin ullamcorper dolor sit amet risus maximus, quis aliquet augue egestas. Praesent auctor eget mauris dictum gravida. 
+              Nunc convallis orci sit amet nibh ullamcorper, eget porta enim dapibus.
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <section id="news">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="m-title">
+            Aktualności
+          </h2>
+        </div>
+        <div class="col-lg-4">
+          <a href="">
+            <div class="news">
+              <div class="photo-news flex-center">
+                <div class="blackout flex-center">
+                  <div class="click-it">
+                    <img src="./img/news/tap.svg" alt="Kliknij, aby sprawdzić zawartość">
+                  </div>
+                </div>
+                <img src="./img/news/photo.jpg" alt="News 1" class="img-fluid">
+              </div>
+              <div class="title-news flex-center">
+                Trudności w porozumiewaniu się? Nie na koncertach Stizz
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <a href="">
+            <div class="news">
+              <div class="photo-news flex-center">
+                <div class="blackout flex-center">
+                  <div class="click-it">
+                    <img src="./img/news/tap.svg" alt="Kliknij, aby sprawdzić zawartość">
+                  </div>
+                </div>
+                <img src="./img/news/photo.jpg" alt="News 1" class="img-fluid">
+              </div>
+              <div class="title-news flex-center">
+                Trudności w porozumiewaniu się? Nie na koncertach Stizz
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <a href="">
+            <div class="news">
+              <div class="photo-news flex-center">
+                <div class="blackout flex-center">
+                  <div class="click-it">
+                    <img src="./img/news/tap.svg" alt="Kliknij, aby sprawdzić zawartość">
+                  </div>
+                </div>
+                <img src="./img/news/photo.jpg" alt="News 1" class="img-fluid">
+              </div>
+              <div class="title-news flex-center">
+                Trudności w porozumiewaniu się? Nie na koncertach Stizz
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="partnership">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="m-title">
+            Partnerzy strategiczny
+          </h2>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="photo-partner flex-center">
+            <img src="./img/partnership/logo.png" alt="Logo partnera nr 1" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="footer">
+    <div class="container h-100">
+      <div class="footer-container">
+        <div id="copy"> 
+          &copy; Fundacja FAREON
+        </div>
+        <div class="ms-auto">
+          Realizacja portalu Filip Głowski
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
