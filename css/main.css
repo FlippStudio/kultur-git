@@ -1,4 +1,4 @@
-body{overflow-x: hidden;color: #313231;}
+body{overflow-x: hidden;color: #313231;padding-top: 100px;}
 a{text-decoration: none;}
 /* Nav */
 .navbar{padding: 0;background: #FFF;z-index: 5;}
@@ -22,12 +22,12 @@ a{text-decoration: none;}
 .top-bar div:hover{cursor: pointer;}
 .top-bar div:last-child:hover{cursor: auto;}
 .top-bar div:first-child{margin-left: 0px;}
-.menu-back{position: absolute;top: 0;left: 520px;z-index: 2;}
+.menu-back{position: absolute;top: 0;left: 510px;z-index: 2;}
 
 /* slider */
-#slider{width: 100%;height: 800px;}
-.slider-back{position: absolute;top: 0;left: -875px;z-index: 2;}
-#carousel{position:absolute;top: 100px;}
+#slider{width: 100%;height: 700px;}
+.slider-back{position: absolute;top: -100px;left: -875px;z-index: 2;}
+#carousel{position:absolute;}
 .carousel-item{right: 0px;}
 .carousel-item.active .carousel-caption{animation: showUp .3s ease-in;opacity: 1;}
 .carousel-caption{position: absolute;bottom: 375px;left: -200px;z-index: 3;color: #E60505;right: auto;font-size: 64px;width: 450px;height: 150px;font-weight: bold;transition: all .3s; opacity: 0;}
@@ -63,6 +63,21 @@ a{text-decoration: none;}
 /* footer */
 #footer{width: 100%;height: 35px;font-size: 14px;color: #FFF;background: #E60505;}
 .footer-container{display: flex;width: 100%;height: 100%;align-items: center;}
+
+/******* CONTACT *******/
+.page-title{font-size: 32px;color: #FFF;line-height: 35px;position: relative;z-index: 1;}
+.title-bar{position: absolute;top: 0;left: 580px;}
+#contact{padding: 40px 0;}
+.c-title{color: #E60505;}
+.c-info{font-size: 18px;margin-bottom: 15px;}
+.c-info span{font-weight: 700;color: #E60505;}
+.c-info a{color: #313231;text-decoration: underline;}
+#form{margin-bottom: 40px;}
+.form-control{border: 3px solid #E60505;border-radius: 15px;margin-bottom: 20px;}
+#c-message{height: 100px;}
+#c-btn-send{width: 100%;height: 40px;background: #E60505;color: #FFF;font-size: 20px;font-weight: 700;border: 2px solid #313231;border-radius: 15px;transition: all .3s ease;}
+#c-btn-send:hover{background: #313231;color: #E60505;border: 2px solid #E60505;}
+
 /* animations */
 @keyframes showUp {
     0% {opacity: 0;}
@@ -90,28 +105,115 @@ a{text-decoration: none;}
 /******* MEDIA QUERIES ******/
 @media screen and (max-width: 1399px){
     /* nav */
-    .menu-back{left: 350px;}
+    .menu-back{left: 330px;}
 
     /* slider */
     .slider-back{left: -1000px;}
     .carousel-caption{left: -375px;}
     .carousel-indicators{right: 1275px;}
+
+
+    /******* CONTACT *******/
+    .title-bar{left: 400px;}
 }
 
 @media screen and (max-width: 1199px){
+    body{padding-top: 70px;}
     /* nav */
     .navbar{padding: 0;background: #313231;z-index: 5;min-height: 70px;}
     .navbar-brand img{height: 60px;}
     .top-bar{width: 60%;}
-    .navbar-toggler{border: 3px solid #E60505 !important;width: 60px; height: 45px;padding: 0;}
-    /* toggler do zrobienia */
+    .navbar-toggler{border: 3px solid #E60505 !important;width: 60px; height: 45px;padding: 0;text-align: center;}
+    .navbar-toggler .toggler-bar{display: block; width: 35px;height: 2px;background: #E60505;margin-bottom: 7px;margin-left: 9.5px;}
+    .navbar-toggler .toggler-bar:first-child{margin-top: 2px;}
+    .navbar-toggler .toggler-bar:last-child{margin-bottom: 0;}
+    #navbarNav, .navbar-nav{height: auto;}
+    .navbar-nav .nav-item{margin-right: 0;margin-bottom: 15px;transition: all 0.3s ease;border-bottom: 2px solid #FFF;padding-bottom: 15px;flex-direction: column;}
+    .navbar-nav .nav-item:last-child{border-bottom: 0;}
+    .navbar-nav .nav-item .nav-link{width: 100%;text-align: center;}
+    .dropdown-menu{background: none;padding: 0; border-radius: 0px;border: 0;width: 100%;}
+    .dropdown-item{text-align: center;}
+    .dropdown-item:hover{background: none;color: #E60505;border-radius: 0px;}
+    .sign-in .nav-link{color: #FFF !important;}
     .menu-back{display: none;}
 
     /* slider */
-    .carousel-caption{left: -375px;}
     #slider{width: 100%;height: auto;}
-    #carousel-small{position:relative;margin-top: 70px;}
+    #carousel-small{position:relative;}
     .carousel-item{right: 0px;}
-    .carousel-item.active .carousel-caption{animation: showUp .3s ease-in;opacity: 1;}
-    .carousel-caption{position: absolute;bottom: 375px;left: -200px;z-index: 3;color: #E60505;right: auto;font-size: 64px;width: 450px;height: 150px;font-weight: bold;transition: all .3s; opacity: 0;}
+    .carousel-caption{position: absolute;bottom: 15px;left: 0;z-index: 3;color: #E60505;font-size: 32px;width: 100%;height: 70px;border: 3px solid #E60505;border-radius: 15px;background: #FFF;padding: 0;}
+
+    /* about */
+    #about{padding-top:30px;}
+    .m-title{font-size: 32px;margin-bottom: 30px;}
+    .flex-about{height: 90%;}
+    .text-about{font-size: 16px;margin-bottom: 20px;}
+
+    /* news */
+    #news{margin-top: 0;}
+
+    /******* CONTACT *******/
+    #contact{padding: 20px 0;}
+    #page-title{background-color: #E60505;border-bottom-left-radius: 25px;}
+    .page-title{font-size: 28px;}
+    .title-bar{display: none;}
+
+    /* animation */
+    @keyframes dropdownFade {
+        0% {opacity: 0;margin-right: -250px;}
+        100% {opacity: 1;margin-right: 0px;}
+    }
 }
+
+@media screen and (max-width: 991px){
+    /* nav */
+    .top-bar{width: 50%;}
+}
+
+@media screen and (max-width: 767px){
+    /* nav */
+    .top-bar{width: 30%;}
+
+    /* slider */
+    .carousel-caption{bottom: 5px;left: 0;font-size: 20px;height: 50px;}
+
+    /* about */
+    .photo-about{margin-bottom: 20px;}
+    .flex-about{height: auto;}
+    .text-about{font-size: 14px;margin-bottom: 20px;}
+
+    /* news */
+    .news .title-news{font-size: 12px;}
+
+    /******* CONTACT *******/
+    #page-title{height: 30px;}
+    .page-title{font-size: 20px;line-height: 25px;}
+}
+
+@media screen and (max-width: 575px){
+    /* nav */
+    #navbarNav{padding-top: 10px;}
+    .navbar-brand img{height: 45px;}
+    .top-bar{width: 50%;}
+    .dropdown-item{font-size: 16px;}
+
+    /* slider */
+    .carousel-caption{bottom: 5px;left: 0;font-size: 20px;height: 50px;}
+
+    /* about */
+    #about{padding-top: 20px;}
+    .m-title{font-size: 20px;margin-bottom: 20px;}
+
+    /* news */
+    #news{margin-bottom: 40px;}
+    .news .title-news{font-size: 12px;}
+
+    /* footer */
+    #footer{width: 100%;height: 64px;font-size: 14px;color: #FFF;background: #E60505;line-height: 32px;}
+    .footer-container{display: flex;width: 100%;height: 100%;align-items: center;flex-direction: column;}
+
+    /******* CONTACT *******/
+    .c-info{font-size: 16px;}
+}
+
+/* Do poprawy mobilny nav jak otwiera się menu */
