@@ -92,14 +92,14 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="drop4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            DOKUMENTY
+                            <?php echo get_the_title(143); ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="drop4">
-                            <li><a class="dropdown-item" href="#">Instrukcja korzystania z portalu</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_page_link(145); ?>"><?php echo get_the_title(145); ?></a></li>
                             <li><a class="dropdown-item" href="<?php echo wp_get_attachment_url(79); ?>" target="_blank">Regulamin</a></li>
                             <li><a class="dropdown-item" href="<?php echo wp_get_attachment_url(80); ?>" target="_blank">Polityka prywatności</a></li>
                             <li><a class="dropdown-item" href="<?php echo wp_get_attachment_url(82); ?>" target="_blank">Polityka Cookies</a></li>
-                            <li><a class="dropdown-item" href="#">RODO</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_page_link(147); ?>"><?php echo get_the_title(147); ?></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
