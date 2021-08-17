@@ -1,0 +1,7 @@
+.login #login_error, .login .message, .login .success{border-left: 4px solid #E60505;}
+.login form .input, .login input[type=password], .login input[type=text]{border: 2px solid #E60505;font-size: 14px;}
+.wp-core-ui .button-primary{background: #E60505;border-color: #313233;}
+#registerform p label{width: 100%;}
+.input{width: 100%;font-size: 14px;}
+#type{width: 100%;border: 2px solid #E60505;min-height: 40px;}
+.login label.mb-3{margin-bottom: 15px;}

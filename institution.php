@@ -1,4 +1,4 @@
-<?php /** Template Name: informacje medialne */ get_header(); ?>
+<?php /** Template Name: Instytucje - strony */ get_header(); ?>
 
 <section id="partner-sec">
     <div class="container">
@@ -6,10 +6,17 @@
 
       <?php
             $arg = array(
-                'post_type' => 'media',
+                'post_type' => 'institution',
                 'posts_per_page' => '-1',
-                'orderby' => 'date',
-                'order' => 'DESC'
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'tax_query' => array(
+                    array (
+                        'taxonomy' => 'places',
+                        'field' => 'term_id',
+                        'terms' => 5,
+                    )
+                ),
             );
 
             $my_query = new WP_Query($arg); ?>
@@ -38,14 +45,14 @@
                                         </h2>
                                     </a>
                                     </div>
-                                    <div class="flex-end">
-                                        <div class="media-date">
-                                            <?php echo get_the_date(); ?>
-                                        </div>
+                                    <div class="flex-center media-h">
+                                    <div class="media-desc">
+                                        <?php echo wp_trim_words(get_the_content(), '35');?>
+                                    </div>
                                     </div>
                                     <a href="<?php echo get_field('link_do_wpisu'); ?>" target="_blank" class="mt-auto">
                                     <div class="media-btn">
-                                        Zobacz informacje
+                                        Zobacz miejsce
                                     </div>
                                     </a>
                                 </div>
