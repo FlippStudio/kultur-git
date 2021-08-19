@@ -67,7 +67,7 @@ function esp_validate_password_reset($errors, $user_data) {
    }
 
    if (!empty($error_message)) {
-      $error_message = '<strong>ERROR</strong>: ' . $error_message;
+      $error_message = '<strong>Błąd</strong>: ' . $error_message;
       if (!is_a($errors, 'WP_Error')) {
          $errors = new WP_Error('pass', $error_message);
       } else {

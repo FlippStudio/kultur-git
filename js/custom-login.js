@@ -1,14 +1,14 @@
 // ----------------------------------------------------
-// Adding the placeholders in textfields of login form 
+// Adding the placeholders in textfields of login/register/lost password form 
 // ----------------------------------------------------
 
 
 jQuery(document).ready(function($) {
 
-    placeholder_login = $('#loginform label[for="user_login"]').text();
+    placeholder_login = $('#loginform label[for="user_login"], #lostpasswordform label[for="user_login"]').text();
     placeholder_password = $('#loginform label[for="user_pass"]').text();
 
-	$('#loginform input[id="user_login"]').prop('placeholder', placeholder_login);
+	$('#loginform input[id="user_login"], #lostpasswordform input[id="user_login"]').prop('placeholder', placeholder_login);
 	$('#loginform input[type="password"]').prop('placeholder', placeholder_password);
 
 });
@@ -16,13 +16,14 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
 
-    placeholder_login = $('#registerform label[for="user_login"]').text();
-    placeholder_email= $('#registerform label[for="user_email"]').text();
-
-	$('#registerform input[id="user_login"]').prop('placeholder', placeholder_login);
-    $('#registerform input[id="user_email"]').prop('placeholder', placeholder_email);
+	$('#registerform input[id="user_login"]').prop('placeholder', 'Wprowadź nazwę użytkownika');
+    $('#registerform input[id="user_email"]').prop('placeholder', 'Wprowadź adres e-mail');
 
 });
+
+// ----------------------------------------------------
+// Disabled submit button in register form, when terms is not checked. 
+// ----------------------------------------------------
 
 jQuery(document).ready(function($) {
 
