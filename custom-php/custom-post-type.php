@@ -166,4 +166,52 @@ function institution_register() {
     register_taxonomy_for_object_type( 'categories', 'institution' );
 }
 
+
+/****************************
+* Forum
+****************************/
+add_action('init', 'forum_register');
+
+function forum_register() {
+    
+ $labels = array(
+     'name' => _x('Discussion', 'post type general name'),
+     'singular_name' => _x('discussion', 'post type singular name'),
+     'add_new' => _x('Dodaj nowy', 'product_leser'),
+     'add_new_item' => __('Dodaj nowy'),
+     'edit_item' => __('Edytuj'),
+     'new_item' => __('Nowy'),
+     'view_item' => __('Pokaz'),
+     'search_items' => __('Szukaj'),
+     'not_found' =>  __('Brak n'),
+     'not_found_in_trash' => __('Brak w koszu'),
+     'parent_item_colon' => '',
+     'menu_name' => 'Discussion'
+ );
+ 
+
+ $args = array(
+     'label' => __('Forum'),
+     'singular_label' => __('forum'),
+     'public' => true,
+     'show_ui' => true,
+     'capability_type' => 'post',
+     'hierarchical' => true,
+     'rewrite' => true,
+     'menu_icon' => 'dashicons-format-chat',
+     'supports' => array('title', 'editor', 'page-attributes', 'thumbnail', 'author','comments'),
+ );
+
+ register_post_type( 'discussion' , $args );
+
+ register_taxonomy('subjects', array('discussion'), array(
+    'hierarchical' => true,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'forum' ),
+  ));
+}
+
 ?>

@@ -1,6 +1,5 @@
 body{color: #25ff00 !important;background-color: #101010 !important;}
 
-
 /* Nav */
 .navbar{background: #101010 !important;}
 .navbar-brand img{filter: invert(50%) sepia(85%) saturate(637%) hue-rotate(67deg) brightness(118%) contrast(127%) !important;}
@@ -63,6 +62,17 @@ body{color: #25ff00 !important;background-color: #101010 !important;}
 /******* Contact FORM *******/
 .wpcf7-not-valid-tip{margin-top: -15px;margin-bottom: 15px;}
 
+/******* FORUM *******/
+.breadcrubs a{color: #25ff00 !important;}
+.thread{background-color: #25ff00 !important;color: #101010 !important;}
+
+.comment{background-color: #25ff00 !important;color: #101010 !important;}
+.comment .children .comment{background-color: #101010 !important;color: #25ff00 !important;}
+
+p.logged-in-as a{color: #00ff00 !important;}
+p.comment-form-comment textarea{border: 3px solid #25ff00 !important;}
+p.form-submit .submit{background: #25ff00 !important;color: #101010 !important;border: 2px solid #101010 !important;}
+p.form-submit .submit:hover{background: #101010 !important;color: #25ff00 !important;border: 2px solid #25ff00 !important;}
 
 /******* MEDIA QUERIES ******/
 

@@ -89,7 +89,7 @@
                             foreach ($children as $child) : ?>
                                 <li><a class="dropdown-item" href="<?php echo get_page_link($child->ID); ?>"><?php echo get_the_title($child->ID); ?></a></li>
                             <?php endforeach; ?>
-                            <li><a class="dropdown-item" href="#">Ogólna dyskusja</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_term_link(8, 'subjects'); ?>">Ogólna dyskusja</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -133,9 +133,7 @@
             <div class="container position-relative">
                 <div class="d-flex">
                     <h1 class="page-title ms-auto">
-                        <?php if (is_home() || is_archive() || is_single()) : echo 'Aktualności';
-                        else : echo get_the_title();
-                        endif; ?>
+                        <?php if(is_tax() || is_singular()): echo 'Forum'; elseif (is_home() || is_archive() || is_single()) : echo 'Aktualności'; elseif (is_404()): echo 'Błąd 404'; else : echo get_the_title(); endif; ?>
                     </h1>
                 </div>
                 <img src="<?php bloginfo('template_directory'); ?>/img/bar.png" alt="Tło pod tytuł strony" class="title-bar">
