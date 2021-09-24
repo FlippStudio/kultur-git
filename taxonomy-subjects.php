@@ -60,7 +60,7 @@ $terms = get_terms( array('taxonomy' => 'subjects', 'hide_empty' => false, 'orde
                 while ($my_query->have_posts()) :
 
                     $my_query->the_post(); ?>
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-md-6 mb-4">
                             <a href="<?php echo get_permalink(); ?>">
                                 <div class="thread">
                                     <h2 class="forum-title">

@@ -30,7 +30,7 @@ function slider_register() {
      'hierarchical' => true,
      'rewrite' => true,
       'menu_icon' => 'dashicons-portfolio',
-     'supports' => array('title','page-attributes'),
+     'supports' => array('title','page-attributes', 'thumbnail'),
  );
 
  register_post_type( 'slider' , $args );
@@ -144,7 +144,7 @@ function institution_register() {
  $args = array(
      'label' => __('Miejsca spotkań'),
      'singular_label' => __('miejsca-wydarzenia-instytucje'),
-     'public' => false,
+     'public' => true,
      'show_ui' => true,
      'capability_type' => 'post',
      'hierarchical' => true,
@@ -212,6 +212,46 @@ function forum_register() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'forum' ),
   ));
+}
+
+
+/****************************
+* Wydarzenia / spotkania
+****************************/
+add_action('init', 'meeting_module_register');
+
+function meeting_module_register() {
+    
+ $labels = array(
+     'name' => _x('Meetings', 'post type general name'),
+     'singular_name' => _x('meetings', 'post type singular name'),
+     'add_new' => _x('Dodaj nowy', 'product_leser'),
+     'add_new_item' => __('Dodaj nowy'),
+     'edit_item' => __('Edytuj'),
+     'new_item' => __('Nowy'),
+     'view_item' => __('Pokaz'),
+     'search_items' => __('Szukaj'),
+     'not_found' =>  __('Brak n'),
+     'not_found_in_trash' => __('Brak w koszu'),
+     'parent_item_colon' => '',
+     'menu_name' => 'Meetings'
+ );
+ 
+
+ $args = array(
+     'label' => __('Spotkanie'),
+     'singular_label' => __('spotkanie'),
+     'public' => false,
+     'show_ui' => true,
+     'capability_type' => 'post',
+     'hierarchical' => false,
+     'rewrite' => true,
+     'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+     'supports' => array('title'),
+ );
+
+ register_post_type( 'meeting' , $args );
+
 }
 
 ?>

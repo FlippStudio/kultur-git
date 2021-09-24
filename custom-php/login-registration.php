@@ -136,8 +136,7 @@ function myplugin_register_form() {
             <label for="terms" class="mb-3">
                 <input type="checkbox" name="terms" id="terms" class="float-left mr-3"/>
                 Akceptuję <a href="<?php echo wp_get_attachment_url(79); ?>" target="_blank" rel="noopener noreferrer">Regulamin</a>, 
-                <a href="<?php echo wp_get_attachment_url(80); ?>" target="_blank" rel="noopener noreferrer">politykę prywatności</a>, <a href="<?php echo wp_get_attachment_url(82); ?>" target="_blank" rel="noopener noreferrer">politykę Cookies</a> oraz 
-                <a href="<?php echo wp_get_attachment_url(); ?>" target="_blank" rel="noopener noreferrer">zasady RODO.</a>
+                <a href="<?php echo wp_get_attachment_url(80); ?>" target="_blank" rel="noopener noreferrer">politykę prywatności</a> oraz <a href="<?php echo wp_get_attachment_url(82); ?>" target="_blank" rel="noopener noreferrer">politykę Cookies.</a>
             </label>   
         </p>
 

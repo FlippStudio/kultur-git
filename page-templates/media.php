@@ -19,7 +19,7 @@
                 while ($my_query->have_posts()) :
 
                     $my_query->the_post(); ?>
-                    <?php $ph = get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
+                    <?php $ph = get_the_post_thumbnail($my_query->post->ID, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
                         <div class="media mb-4">
                             <div class="row">
                             <div class="col-md-6">

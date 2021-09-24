@@ -12,33 +12,10 @@
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/accesibility.js"></script>
 <script>
     $(document).ready(function(){
-        checkFont();
         checkContrast();
-
-        $("#increase-font img").on('click keypress', function(e){
-            if($("body").css("fontSize") == '16px'){
-                $("body").css("fontSize", "112.5%");
-                $.removeCookie("fontsize");
-                $.cookie("fontsize", 2, {path : "/"});
-            }else if($("body").css("fontSize") == '14px'){
-                $("body").css("fontSize", "100%");
-                $.cookie("fontsize", 1);
-            }
-        });
-        
-        $("#descrease-font img").on('click keypress', function(e){
-            if($("body").css("fontSize") == '16px'){
-                $("body").css("fontSize", "87.5%");
-                $.removeCookie("fontsize");
-                $.cookie("fontsize", 0, {path : "/"});
-            }else if($("body").css("fontSize") == '18px'){
-                $("body").css("fontSize", "100%");
-                $.removeCookie("fontsize");
-                $.cookie("fontsize", 1, {path : "/"});
-            }
-        });
 
         $("#contrast img").on('click keypress', function(e){
             if($('link[href="<?php bloginfo('template_directory'); ?>/css/contrast.css"]').prop('disabled')){
@@ -52,20 +29,8 @@
             }
         });
 
-        function checkFont(){
-            if($.cookie("fontsize") != null){
-                if($.cookie("fontsize") == 2)
-                    $("body").css("fontSize", "112.5%");
-                else if($.cookie("fontsize") == 0)
-                    $("body").css("fontSize", "87.5%");
-                else
-                    $("body").css("fontSize", "100%");
-            }
-        }
-
         function checkContrast(){
             if($.cookie("contrast") != null){
-                console.log($.cookie("contrast"));
                 if($.cookie("contrast") == 'true')
                     $('link[href="<?php bloginfo('template_directory'); ?>/css/contrast.css"]').prop('disabled', false);
             }

@@ -34,6 +34,8 @@ a{text-decoration: none;}
 .top-bar div:hover{cursor: pointer;}
 .top-bar div:last-child:hover{cursor: auto;}
 .top-bar div:first-child{margin-left: 0px;}
+#chat{position: relative;}
+#chat a .bpbmuc{position: absolute;bottom: 0;right: -6px;margin: 0;background: #E60505;}
 #sign-in{width: 160px;height: 100%;background: #E60505;border-radius: 0 0 15px 15px;text-align: center;font-size: 1.125em;font-weight: bold;margin-left: 30px;}
 #sign-in a{text-decoration: none;color: #FFF;}
 .menu-back{position: absolute;top: 0;left: 510px;z-index: 2;}
@@ -64,6 +66,7 @@ a{text-decoration: none;}
 .news:hover{transform: scale(1.05);}
 .news:hover .photo-news .blackout{display: flex;}
 .news .photo-news{width: 100%;height:100%;position: relative;}
+.news .photo-news img{max-height: 300px;}
 .blackout{transition: all 0.3s ease;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: rgba(0,0,0,0.5);border-radius: 25px 25px 0px 0px;display: none;animation: moveRight .3s ease-in;}
 .click-it{animation: clickIt 1s ease .5s;}
 .click-it img{width: 100px;height: 100px;}
@@ -95,6 +98,8 @@ a{text-decoration: none;}
 
 /******* MEDIA *******/
 #media{padding: 40px 0;}
+.media .photo-place{width: 100%;height: 100%;min-height: 370px;max-height: 370px;}
+.media img{border-radius: 15px;max-height: 370px;}
 .media-flex{display: flex;flex-direction: column;width: 100%;height: 100%;}
 .media-title{font-size: 1.5em;color: #313231;transition: all 0.3s ease;text-align: right;}
 .media-title:hover{color: #E60505;}
@@ -107,8 +112,9 @@ a{text-decoration: none;}
 /******* PARTNERSHIP *******/
 #partner-sec{padding: 40px 0;}
 .partner-instruction{font-size: 1.125em;text-align: justify;}
-.partner-logo{min-height: 110px;max-height: 110px;}
-.partner-logo img{max-height: 110px;}
+.partner{height: 100%;max-height: 200px;}
+.partner-logo{height: 100%;}
+.partner-logo img{max-height: 200px;}
 .partner-name{font-size: 1.125em;font-weight: 700;text-align: center;margin: 10px 0;}
 .partner-desc{font-size: 0.875em;text-align: center;}
 #text-sec{padding: 40px 0;}
@@ -124,13 +130,13 @@ a{text-decoration: none;}
 #forum{padding: 40px 0;}
 .breadcrubs{font-size: 1.25em;font-weight: 500;}
 .breadcrubs a{color: #E60505;}
-.thread{background-color: #E60505;padding: 30px 15px;color: #FFF;border-radius: 15px;box-shadow: 0px 4px 6px rgba(49,50,49,0.6);transition: all 0.3s ease;}
+#forum .thread{background-color: #E60505;padding: 30px 15px;color: #FFF;border-radius: 15px;box-shadow: 0px 4px 6px rgba(49,50,49,0.6);transition: all 0.3s ease;}
 .thread .forum-title{text-align: center;margin-bottom: 15px;font-size: 2em;}
 .thread .forum-post-amount{text-align: center;font-size: 1.5em;font-weight: 500;margin-bottom: 15px;}
 .thread .forum-desc{text-align: justify;line-height: 25px;}
 
 .comment-link a{color: #E60505;}
-#comments{margin: 30px 0;text-align: center;}
+#comments{padding: 150px 0 30px;text-align: center;}
 .commentlist{list-style: none;padding-left: 0;}
 .comment{background-color: #313231;padding: 30px 15px;color: #FFF;border-radius: 15px;box-shadow: 0px 4px 6px rgba(49,50,49,0.6);transition: all 0.3s ease;margin-bottom: 30px;}
 .comment .comment-body div{margin-bottom: 1rem;}
@@ -145,6 +151,53 @@ p.comment-form-comment label{width: 100%;margin-bottom: 10px;font-weight: 500;fo
 p.comment-form-comment textarea{width: 100%;border: 3px solid #E60505;border-radius: 15px;padding: 15px;}
 p.form-submit .submit{width: 100%;height: 40px;background: #E60505;color: #FFF;font-size: 1.25em;font-weight: 700;border: 2px solid #313231;border-radius: 15px;transition: all .3s ease;}
 p.form-submit .submit:hover{background: #313231;color: #E60505;border: 2px solid #E60505;}
+
+.comment-reply-title a, .must-log-in a{color: #E60505;}
+#cancel-comment-reply-link{font-size: .75em;}
+
+/******* EVENTS *******/
+#events{padding: 40px 0;}
+.event{color: #313231;border-radius: 15px;padding: 15px;height: 100%;border: 3px solid #E60505;}
+.event .event-title{font-size: 1.75em;font-weight: 700;}
+.event .event-info{font-size: 1.25em;}
+.event .event-info p{margin: 0;}
+.event span.event-desc{font-size: 0.75em;color: #E60505;text-align: center;width: 100%;font-weight: 500;}
+.btn-user-info{width: 100%;background-color: #313231;color: #FFF;border-radius: 5px;font-size: 1.25em;font-weight: 700;text-align: center;transition: all .3s ease;display: block;padding: 10px 15px;text-align: center;margin-bottom: 5px;}
+.btn-user-info:hover{background-color: #E60505;color: #FFF;}
+.btn-event{width: 100%;background-color: #E60505 !important;border-radius: 5px;font-size: 1.25em;font-weight: 700;text-align: center;transition: all .3s ease;}
+.btn-event:hover{background-color: #313231 !important;}
+
+/******* CHAT *******/
+.bp-messages-wrap{border: 3px solid #E60505 !important;border-radius: 5px !important;background: #313231 !important;}
+.bp-messages-wrap .chat-header{background: #E60505 !important;}
+.bp-messages-wrap .chat-header .user{color: #FFF;}
+.bp-messages-wrap .threads-list .thread{margin-bottom: 15px;background: #E60505;color: #FFF;}
+.bp-messages-wrap .threads-list .thread:hover>*{background-color: #313231 !important;color: #FFF !important;}
+.bp-messages-wrap .chat-footer .bpbm-user-me .bpbm-user-me-popup{background: #E60505 !important;}
+.bp-messages-wrap .chat-footer .bpbm-user-me .bpbm-user-me-popup .bpbm-user-me-popup-list .bpbm-user-me-popup-list-item .bpbm-user-me-popup-list-item-title{color: #FFF !important;}
+.bp-messages-wrap .chat-footer .bpbm-user-me .bpbm-user-me-name{color: #FFF;}
+.bp-messages-wrap .bpbm-user-options .bpbm-user-option-description{color: #FFF !important;}
+.bp-messages-wrap .new-message form>div label{color: #FFF;}
+.new-message button[type=submit]{background: #E60505 !important;color: #FFF !important;font-weight: 700;}
+.bp-messages-wrap .list .messages-stack .content .info .time{color: #FFF;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack .content{color: #FFF;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack .content .messages-list{color: #FFF !important;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack.incoming .content .messages-list li .message-content{color: #313231 !important;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack.outgoing .content .messages-list>li .message-content{background: #E60505 !important;color: #FFF !important;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack.incoming .content .messages-list>li .message-content .bpbm-replied-message .bpbm-replied-message-name, .bp-messages-wrap.bpbm-template-modern .list .messages-stack.incoming .content .messages-list>li .message-content .bpbm-replied-message .bpbm-replied-message-text{color: #313231 !important;}
+.bp-messages-wrap.bpbm-template-modern .list .messages-stack.incoming .content .messages-list>li .message-content .bpbm-replied-message-reply{color: #313231 !important;}
+.bp-messages-wrap .reply{background-color:#E60505 !important;}
+.bpbm-preview-message{background: #E60505 !important;color: #FFF !important;}
+.bp-messages-wrap .threads-list .thread .info .name{font-size: 1.125em !important;margin-bottom: 10px !important;}
+.bp-messages-wrap .threads-list .thread .info .name+h4{font-size: 1em !important;margin: 0 0 10px !important;}
+.bp-messages-wrap .threads-list .thread .info p{font-size: .875em !important;}
+.bp-messages-wrap .threads-list .thread.unread{background: #313231 !important;}
+.bp-messages-wrap .bpbm-user-options .bpbm-user-option-toggle label{color: #FFF;}
+.bp-messages-wrap .threads-list .thread.blocked .deleted{background: #313231 !important;}
+
+/******* USER PROFILE *******/
+.user-info{font-size: 1.25em;font-weight: 500;}
+.user-description{font-size: .875em;margin-bottom: 20px;}
 
 /* animations */
 @keyframes showUp {
@@ -191,7 +244,7 @@ p.form-submit .submit:hover{background: #313231;color: #E60505;border: 2px solid
     .navbar{padding: 0;background: #313231;z-index: 5;min-height: 70px;}
     .navbar-brand img{height: 60px;}
     .top-bar{width: 60%;}
-    .navbar-toggler{border: 3px solid #E60505 !important;width: 60px; height: 45px;padding: 0;text-align: center;}
+    .navbar-toggler{border: 3px solid #E60505 !important;width: 60px; height: 45px;padding: 0;text-align: center;position: relative;}
     .navbar-toggler .toggler-bar{display: block; width: 35px;height: 2px;background: #E60505;margin-bottom: 7px;margin-left: 9.5px;}
     .navbar-toggler .toggler-bar:first-child{margin-top: 2px;}
     .navbar-toggler .toggler-bar:last-child{margin-bottom: 0;}
@@ -222,12 +275,20 @@ p.form-submit .submit:hover{background: #313231;color: #E60505;border: 2px solid
 
     /******* MEDIA *******/
     .media-flex .media-desc{font-size: 0.75em;}
+    .media-desc .media-photo{float: none;padding: 15px 0;text-align: center;}
 
     /******* CONTACT *******/
     #contact{padding: 20px 0;}
     #page-title{background-color: #E60505;border-bottom-left-radius: 25px;}
     .page-title{font-size: 1.75em;}
     .title-bar{display: none;}
+
+    /******* FORUM *******/
+    #comments{padding: 100px 0 30px;}
+
+    /******* EVENTS *******/
+    .event .event-title{font-size: 1.5em;}
+    .event .event-info{font-size: 1.125em;}
 
     /* animation */
     @keyframes dropdownFade {
@@ -243,7 +304,6 @@ p.form-submit .submit:hover{background: #313231;color: #E60505;border: 2px solid
     /******* MEDIA *******/
     #media{padding: 30px 0;}
     .media-title{font-size: 1.125em;}
-    .media-desc .media-photo{float: none;padding: 15px 0;text-align: center;}
     .media-btn{font-size: 1.25em;}
 
     /******* PARTNERSHIP *******/
@@ -343,4 +403,18 @@ p.form-submit .submit:hover{background: #313231;color: #E60505;border: 2px solid
     .comment{font-size: .875em;}
 
     p.logged-in-as a{font-size: .875em;}
+
+    /******* EVENTS *******/
+    .event .event-title{font-size: 1.25em;}
+    .event .event-info{font-size: .875em;}    
+
+    /******* CHAT *******/
+    .bp-messages-wrap .threads-list .thread .info .name{font-size: 1em !important;}
+    .bp-messages-wrap .threads-list .thread .info .name+h4{font-size: .875em !important;margin: 0 0 10px !important;}
+    .bp-messages-wrap .threads-list .thread .info p{font-size: .75em !important;}
+    .bpbmuc{position: absolute;top: -12px;right: -15px;background: #E60505 !important;}
+
+    /******* USER PROFILE *******/
+    .user-info{font-size: 1.125em;}
+    .user-description{font-size: .75em;margin-bottom: 15px;}
 }

@@ -26,11 +26,11 @@
                 while ($my_query->have_posts()) :
 
                     $my_query->the_post(); ?>
-                    <?php $ph = get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
+                    <?php $ph = get_the_post_thumbnail($my_query->post->ID, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                             <div class="partner">
                                 <div class="partner-logo flex-center">
-                                    <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                                    <?php the_post_thumbnail('medium', array('class' => 'img-fluid')); ?>
                                 </div>
                                 <div class="partner-name flex-center">
                                 <?php echo get_the_title(); ?>

@@ -3,7 +3,7 @@
 <section id="media">
     <div class="container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-    $ph = get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'img-fluid rounded' ) ); if($ph): ?>
+    $ph = get_the_post_thumbnail(NULL, 'thumbnail', array( 'class' => 'img-fluid rounded' ) ); if($ph): ?>
       <div class="media mb-4">
         <div class="row">
           <div class="col-md-6">

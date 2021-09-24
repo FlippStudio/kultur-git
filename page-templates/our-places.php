@@ -1,4 +1,4 @@
-<?php /** Template Name: Miejsce i wydarzenia */ get_header(); ?>
+<?php /** Template Name: Nasze miejsca i wydarzenia */ get_header(); ?>
 
 <section id="partner-sec">
     <div class="container">
@@ -26,12 +26,12 @@
                 while ($my_query->have_posts()) :
 
                     $my_query->the_post(); ?>
-                    <?php $ph = get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
+                    <?php $ph = get_the_post_thumbnail( $my_query->post->ID, 'thumbnail', array( 'class' => 'img-fluid' ) ); if($ph): ?>
                         <div class="media mb-4">
                             <div class="row">
                             <div class="col-md-6">
-                                <div class="flex-center">
-                                <a href="<?php echo get_field('link_do_wpisu'); ?>" target="_blank">
+                                <div class="flex-center photo-place">
+                                <a href="<?php echo get_permalink(); ?>">
                                     <?php the_post_thumbnail('large', array('class' => 'img-fluid rounded border border-danger')); ?>
                                 </a>
                                 </div>
@@ -39,7 +39,7 @@
                             <div class="col-md-6">
                                 <div class="media-flex">
                                     <div class="flex-end">
-                                    <a href="<?php echo get_field('link_do_wpisu'); ?>" target="_blank">
+                                    <a href="<?php echo get_permalink(); ?>">
                                         <h2 class="media-title">
                                             <?php echo get_the_title(); ?>
                                         </h2>
@@ -50,9 +50,9 @@
                                         <?php echo wp_trim_words(get_the_content(), '35');?>
                                     </div>
                                     </div>
-                                    <a href="<?php echo get_field('link_do_wpisu'); ?>" target="_blank" class="mt-auto">
+                                    <a href="<?php echo get_permalink(); ?>" class="mt-auto">
                                     <div class="media-btn">
-                                        Zobacz miejsce
+                                        Sprawdź ulgi
                                     </div>
                                     </a>
                                 </div>

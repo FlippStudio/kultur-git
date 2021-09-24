@@ -4,4 +4,6 @@
 #registerform p label{width: 100%;}
 .input{width: 100%;font-size: 14px;}
 #type{width: 100%;border: 2px solid #E60505;min-height: 40px;}
-.login label.mb-3{margin-bottom: 15px;}
+.login label.mb-3{margin-bottom: 15px;}
+.login #backtoblog, .login #nav{font-size: 1.125em;}
+.login #nav a:first-child{font-weight: 500;color: #E60505;}

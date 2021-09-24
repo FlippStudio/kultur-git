@@ -10,4 +10,7 @@ require_once 'custom-php/functions-strong-passwords.php';
 // Login / registration stuff
 require_once 'custom-php/login-registration.php';
 
+// Login / registration stuff
+require_once 'custom-php/admin-page.php';
+
 ?>
