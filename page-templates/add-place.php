@@ -1,7 +1,7 @@
 <?php /** Template Name: Zapronuj swoje miejsce */ get_header(); ?>
 
 <section id="form-place" class="flex-center">
-    <div class="container">
+    <div class="container" id="content">
         <div class="partner-instruction mb-4">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; endif;?>
         </div>

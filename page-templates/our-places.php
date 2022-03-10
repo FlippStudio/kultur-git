@@ -1,9 +1,13 @@
-<?php /** Template Name: Nasze miejsca i wydarzenia */ get_header(); ?>
+<?php /** Template Name: Nasze miejsca i wydarzenia */ get_header(); $term = get_term( 4 ); ?>
 
 <section id="partner-sec">
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
-
+        <div class="col-12 mb-5">
+            <div class="media-desc text-center">
+                <?php echo $term->description; ?>
+            </div>
+        </div>
       <?php
             $arg = array(
                 'post_type' => 'institution',

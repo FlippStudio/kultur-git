@@ -1,7 +1,7 @@
 <?php /** Template Name: kontakt */ get_header(); ?>
 
 <section id="contact">
-  <div class="container">
+  <div class="container" id="content">
     <div class="row">
       <div class="col-md-6">
         <h2 class="c-title text-center mb-3">Autor innowacji</h2>

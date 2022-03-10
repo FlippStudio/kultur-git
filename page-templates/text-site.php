@@ -1,7 +1,7 @@
 <?php /** Template Name: podstrona tekstowa */ get_header(); ?>
 
 <section id="text-sec">
-    <div class="container">
+    <div class="container" id="content">
       <div class="text-desc">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; endif; ?>
       </div>

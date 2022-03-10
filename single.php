@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="media">
-    <div class="container">
+    <div class="container" id="content">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center mb-4">

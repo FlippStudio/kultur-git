@@ -1,7 +1,7 @@
 <?php /** Template Name: nasi partnerzy */ get_header(); ?>
 
 <section id="partner-sec">
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
 
       <?php

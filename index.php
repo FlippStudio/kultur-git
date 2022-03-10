@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section id="media">
-    <div class="container">
+    <div class="container" id="content">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
     $ph = get_the_post_thumbnail(NULL, 'thumbnail', array( 'class' => 'img-fluid rounded' ) ); if($ph): ?>
       <div class="media mb-4">

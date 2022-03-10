@@ -2,7 +2,7 @@
 
 <section id="events">
 
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
 
       <?php
@@ -52,13 +52,19 @@
                                     <span class="event-desc">Rodzaj wyjścia</span>
                                 </div>
                                 <div class="event-info flex-center">
-                                    <?php $date = get_field('data_i_godzina_rozpoczecia'); echo $date . ' - ' . substr(get_field('data_i_godzina_zakonczenia'), -5); ?> 
+                                    <?php $date = get_field('data_i_godzina_rozpoczecia'); echo $date; if (get_field('data_i_godzina_zakonczenia')): echo ' - ' . substr(get_field('data_i_godzina_zakonczenia'), -5); endif; ?> 
                                 </div>
                                 <div class="flex-center mb-3">
-                                    <span class="event-desc">Data i orientacyjny czas trwania wyjścia</span>
+                                    <span class="event-desc">Data i orientacyjny czas wyjścia</span>
                                 </div>
                                 <div class="event-info flex-center">
                                     <?php echo get_field('wybor_miejsca_wydarzenia'); ?>
+                                </div>
+                                <div class="flex-center mb-3">
+                                    <span class="event-desc">Adres wydarzenia</span>
+                                </div>
+                                <div class="event-info flex-center">
+                                    <?php echo get_field('miejsca__adres_wydarzenia'); ?>
                                 </div>
                                 <div class="flex-center mb-3">
                                     <span class="event-desc">Miejsce wydarzenia</span>
