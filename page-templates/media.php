@@ -54,8 +54,9 @@
                         </div>
             <?php endif;
                 endwhile;
-            endif;
-            wp_reset_postdata(); ?>
+            else: ?>
+            <h2 class="text-center mt-4">Brak wzianek medialnych o projekcie</h2>
+            <? endif; wp_reset_postdata(); ?>
       </div>
     </div>
   </section>

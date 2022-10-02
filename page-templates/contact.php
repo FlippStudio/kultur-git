@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h2 class="c-title text-center mb-3">Inkubator innowacji</h2>
+        <h2 class="c-title text-center mb-3">Rops w Krakowie, Inkubator Dostępności</h2>
         <div class="c-info">
           <span>Adres:</span> <?php the_field('adres_2'); ?>
         </div>
